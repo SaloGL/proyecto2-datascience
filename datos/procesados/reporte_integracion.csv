@@ -1,0 +1,17 @@
+paso,valor,detalle
+Partidos en football-data,12607,"Fuente 1, una fila por partido"
+Partidos en Transfermarkt,12607,"Fuente 2, mismas ligas y temporadas"
+Días-país en OxCGRT,5480,"Fuente 3, 5 países, 2020-01-01 a 2022-12-31"
+Equipos con equivalencia de nombre,145,Nombres football-data -> Transfermarkt (ver equivalencias_equipos.csv)
+Duplicados en Transfermarkt,0,Partidos repetidos con la misma llave
+Partidos unidos football-data + Transfermarkt,12601,Cardinalidad 1 a 1 verificada
+Partidos de football-data sin pareja en Transfermarkt,6,Se conservan; quedan sin asistencia ni árbitro
+Partidos de Transfermarkt sin pareja en football-data,6,Se descartan
+Partidos unidos con marcador distinto,1,Control de calidad de la unión
+Partidos fuera de la cobertura de OxCGRT,7359,"Antes de 2020 o después de 2022: no había restricciones, se asigna 0"
+Partidos en periodo 'Antes del COVID',4948,
+Partidos en periodo 'Regreso del público',4683,
+Partidos en periodo 'Sin público',2126,
+Partidos en periodo 'Aforo parcial',845,
+Partidos en periodo 'Sin dato',5,
+Partidos finales en el dashboard,12602,Se excluyen los 'Sin dato' (sin asistencia y sin restricciones: dato faltante)
