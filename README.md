@@ -59,7 +59,7 @@ ventaja_local/
 ├── app.py                  # Dashboard en Streamlit
 ├── main.py                 # Pipeline: descarga -> limpieza -> integración -> guardado
 ├── requirements.txt
-├── .streamlit/config.toml  # Tema oscuro del dashboard
+├── .streamlit/config.toml  # Tema claro (blanco) del dashboard
 ├── datos/
 │   ├── raw/                # Datos tal como se descargaron (sin modificar)
 │   │   ├── football_data/  # 35 CSV: 5 ligas x 7 temporadas

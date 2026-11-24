@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 COLOR_LOCAL = "#4C9BE8"
 COLOR_VISITANTE = "#F28E2B"
 COLOR_EMPATE = "#8C8C8C"
-COLOR_TEXTO = "white"
+COLOR_TEXTO = "#262730"
 COLOR_PERIODOS = {
     "Antes del COVID": "#4C9BE8",
     "Sin público": "#E15759",
@@ -16,7 +16,7 @@ COLOR_PERIODOS = {
 
 def aplicar_estilo(fig, ax) -> None:
     """
-    Fondo transparente y texto blanco para que combine con el tema oscuro de Streamlit.
+    Fondo transparente y texto oscuro para que combine con el tema claro de Streamlit.
     """
     fig.patch.set_alpha(0.0)
     ax.patch.set_alpha(0.0)
@@ -27,7 +27,7 @@ def aplicar_estilo(fig, ax) -> None:
     for lado in ["top", "right"]:
         ax.spines[lado].set_visible(False)
     for lado in ["left", "bottom"]:
-        ax.spines[lado].set_color("#666666")
+        ax.spines[lado].set_color("#BBBBBB")
 
 
 def graficar_resultados_por_periodo(resumen: pd.DataFrame) -> plt.Figure:
@@ -101,7 +101,7 @@ def graficar_evolucion_mensual(mensual: pd.DataFrame) -> plt.Figure:
     ax_fondo = ax.twinx()
 
     ocupacion = mensual["ocupacion"].fillna(0) * 100
-    ax_fondo.bar(mensual.index, ocupacion, width=25, color="#FFFFFF", alpha=0.12)
+    ax_fondo.bar(mensual.index, ocupacion, width=25, color="#000000", alpha=0.10)
     ax_fondo.set_ylim(0, 300)  # las barras ocupan solo el tercio inferior
     ax_fondo.set_yticks([])
     ax_fondo.patch.set_alpha(0.0)
